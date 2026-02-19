@@ -1,0 +1,111 @@
+/* ═══════════════════════════════════════════
+   ProjectCard
+   ═══════════════════════════════════════════ */
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  border-color: var(--border-color);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card), 0 0 40px rgba(124, 58, 237, 0.1);
+}
+
+/* ── Image ── */
+.project-card-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+.project-card-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 6, 16, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+.project-card:hover .project-card-image-overlay { opacity: 1; }
+
+.project-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  background: var(--gradient-main);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(10px);
+  transition: var(--transition);
+}
+.project-card:hover .project-view-btn { transform: translateY(0); }
+.project-view-btn:hover {
+  background: var(--gradient-hover);
+  color: #fff;
+}
+
+.project-category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28em 0.75em;
+  background: rgba(6, 6, 16, 0.65);
+  color: var(--accent-cyan-lt);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+}
+
+/* ── Body ── */
+.project-card-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.project-card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+.project-card-desc {
+  font-size: 0.87rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+/* ── Badges ── */
+.project-card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.project-tech-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25em 0.65em;
+  border-radius: 50px;
+  border: 1px solid;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}

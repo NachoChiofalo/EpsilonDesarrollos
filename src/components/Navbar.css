@@ -1,0 +1,172 @@
+/* ═══════════════════════════════════════════
+   Navbar
+   ═══════════════════════════════════════════ */
+
+.epsilon-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.1rem 0;
+  transition: background 0.4s ease, border-color 0.4s ease, padding 0.4s ease,
+    box-shadow 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+.epsilon-navbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.epsilon-navbar.scrolled {
+  padding: 0.7rem 0;
+  background: rgba(6, 6, 16, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: var(--border-color);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* ── Brand ── */
+.epsilon-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.brand-epsilon {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.brand-accent {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Nav List ── */
+.epsilon-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Nav Link ── */
+.epsilon-nav-link {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.epsilon-nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(124, 58, 237, 0.08);
+}
+.epsilon-nav-link.active {
+  color: var(--accent-violet-lt);
+  background: rgba(124, 58, 237, 0.14);
+}
+
+/* ── CTA Button ── */
+.epsilon-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--gradient-main);
+  color: #fff !important;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: var(--transition);
+  box-shadow: 0 0 24px rgba(124, 58, 237, 0.3);
+  cursor: pointer;
+}
+.epsilon-cta-btn:hover {
+  background: var(--gradient-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.45);
+  color: #fff !important;
+}
+
+/* ── Hamburger ── */
+.epsilon-hamburger {
+  background: transparent;
+  border: none;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+.epsilon-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: var(--transition);
+  transform-origin: center;
+}
+.epsilon-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.epsilon-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.epsilon-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── Mobile Menu ── */
+.epsilon-mobile-menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  background: rgba(6, 6, 16, 0.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+}
+.epsilon-mobile-menu.open {
+  max-height: 400px;
+  opacity: 1;
+  padding: 1rem 0 1.5rem;
+}
+.epsilon-mobile-menu ul {
+  list-style: none;
+  padding: 0 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.epsilon-mobile-menu .epsilon-nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+.epsilon-mobile-menu .epsilon-cta-btn {
+  margin-left: 0;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+}
