@@ -10,13 +10,21 @@ const SERVICES = [
       'Aplicaciones web modernas, rápidas y escalables construidas con las últimas tecnologías del mercado.',
     color: '#7c3aed',
   },
-  {
+  /*{
     icon: 'bi-phone-fill',
     title: 'Apps Móviles',
     description:
       'Experiencias nativas e híbridas para iOS y Android que tus usuarios adoptarán desde el primer uso.',
     color: '#06b6d4',
-  },
+  },*/
+  
+  /*{
+    icon: 'bi-cloud-arrow-up-fill',
+    title: 'Cloud & DevOps',
+    description:
+      'Infraestructura escalable en la nube con CI/CD, contenedores y monitoreo en tiempo real.',
+    color: '#10b981',
+  },*/
   {
     icon: 'bi-gear-wide-connected',
     title: 'Software a Medida',
@@ -24,14 +32,23 @@ const SERVICES = [
       'Sistemas empresariales y automatizaciones customizadas que se adaptan a los procesos únicos de tu negocio.',
     color: '#f59e0b',
   },
-  {
-    icon: 'bi-cloud-arrow-up-fill',
-    title: 'Cloud & DevOps',
-    description:
-      'Infraestructura escalable en la nube con CI/CD, contenedores y monitoreo en tiempo real.',
-    color: '#10b981',
-  },
+{
+  icon: 'bi-robot',
+  title: 'Automatización Inteligente',
+  description:
+    'Optimizamos tus costos y tiempos eliminando tareas repetitivas mediante scripts y procesos automáticos.',
+  color: '#10b981', // Verde éxito/eficiencia
+},
+{
+  icon: 'bi-diagram-3-fill',
+  title: 'Integración de Sistemas',
+  description:
+    'Conectamos tus herramientas actuales (CRMs, ERPs, Pasarelas de pago) para centralizar tu operación en un solo lugar.',
+  color: '#ec4899', // Un rosa/fucsia para contrastar
+},
+
 ]
+
 
 const STATS = [
   { value: '50+', label: 'Proyectos Entregados', icon: 'bi-check2-circle' },
@@ -155,7 +172,7 @@ export default function Home() {
               <div className="about-visual">
                 {[
                   { icon: 'bi-stars',            label: 'Innovación'  },
-                  { icon: 'bi-shield-check-fill', label: 'Calidad',  featured: true },
+                  { icon: 'bi-shield-fill-check', label: 'Calidad'/*,  featured: true */},
                   { icon: 'bi-rocket-takeoff-fill',label: 'Performance' },
                   { icon: 'bi-people-fill',        label: 'Equipo'   },
                 ].map(({ icon, label, featured }) => (
@@ -175,8 +192,8 @@ export default function Home() {
                 <span className="text-gradient">dev shop</span>
               </h2>
               <p className="section-text mb-3">
-                En Epsilon Desarrollos somos un equipo apasionado de ingenieros,
-                diseñadores y estrategas digitales comprometidos a entregar software
+                En Epsilon Desarrollos somos un equipo apasionado de ingenieros
+                y estrategas digitales comprometidos a entregar software
                 que no solo funciona —{' '}
                 <strong style={{ color: 'var(--text-primary)' }}>sino que transforma negocios.</strong>
               </p>
@@ -210,7 +227,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="row gy-4">
+          <div className="row gy-4 justify-content-center">
             {SERVICES.map((s, i) => (
               <div key={i} className="col-12 col-sm-6 col-lg-3">
                 <div className="service-card" style={{ '--svc-color': s.color }}>
@@ -232,7 +249,8 @@ export default function Home() {
       {/* ══════════════════════════════
           STATS
       ══════════════════════════════ */}
-      <section className="stats-section">
+
+      {/*<section className="stats-section">
         <div className="container">
           <div className="stats-grid">
             {STATS.map((s, i) => (
@@ -244,7 +262,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* ══════════════════════════════
           CTA

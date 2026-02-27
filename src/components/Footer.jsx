@@ -9,12 +9,14 @@ const QUICK_LINKS = [
 
 const SERVICES = [
   'Desarrollo Web',
-  'Apps Móviles',
+  //Apps Móviles',
   'Software a Medida',
   'Consultoría IT',
-  'Cloud & DevOps',
+  //'Cloud & DevOps',
 ]
 
+
+//NOTA: Estos links NO LLEVAN A NINGUN LADO! ACTUALIZAR!!!!!!
 const SOCIALS = [
   { icon: 'bi-linkedin',   href: '#', label: 'LinkedIn' },
   { icon: 'bi-github',     href: '#', label: 'GitHub' },
@@ -88,17 +90,17 @@ export default function Footer() {
           <div className="col-12 col-lg-3">
             <h6 className="footer-heading">Contacto</h6>
             <div className="footer-contact-list">
-              <a href="mailto:hola@epsilondev.com" className="footer-contact-item">
+              <a href="mailto:epsilon.desarrollosarg@gmail.com" className="footer-contact-item">
                 <i className="bi bi-envelope-fill" />
-                hola@epsilondev.com
+                epsilon.desarrollosarg@gmail.com
               </a>
-              <a href="tel:+541112345678" className="footer-contact-item">
+              <a href="tel:+5493513320635" className="footer-contact-item">
                 <i className="bi bi-telephone-fill" />
-                +54 11 1234-5678
+                +54 9 351 3320635
               </a>
               <span className="footer-contact-item">
                 <i className="bi bi-geo-alt-fill" />
-                Buenos Aires, Argentina
+                Córdoba, Argentina
               </span>
             </div>
           </div>

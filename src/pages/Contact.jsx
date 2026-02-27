@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import './Contact.css'
+import emailjs from '@emailjs/browser'
 
 const INITIAL = { name: '', email: '', phone: '', service: '', message: '' }
 
 const SERVICES_OPTIONS = [
   'Desarrollo Web',
-  'App Móvil',
+  //'App Móvil',
   'Software a Medida',
   'Consultoría IT',
-  'Cloud & DevOps',
+  //'Cloud & DevOps',
   'Otro',
 ]
 
 const CONTACT_INFO = [
-  { icon: 'bi-envelope-fill',   label: 'Email',     value: 'hola@epsilondev.com',    href: 'mailto:hola@epsilondev.com' },
-  { icon: 'bi-telephone-fill',  label: 'Teléfono',  value: '+54 11 1234-5678',        href: 'tel:+541112345678' },
-  { icon: 'bi-geo-alt-fill',    label: 'Ubicación', value: 'Buenos Aires, Argentina', href: '#' },
+  { icon: 'bi-envelope-fill',   label: 'Email',     value: 'epsilon.desarrollosarg@gmail.com',    href: 'mailto:epsilon.desarrollosarg@gmail.com' },
+  { icon: 'bi-telephone-fill',  label: 'Teléfono',  value: '+54 9 351 332-0635',        href: 'tel:+5493513320635' },
+  { icon: 'bi-geo-alt-fill',    label: 'Ubicación', value: 'Córdoba, Argentina', href: '#' },
   { icon: 'bi-clock-fill',      label: 'Respuesta', value: 'Menos de 24 hs',          href: '#' },
 ]
 
@@ -49,13 +50,40 @@ export default function Contact() {
     if (Object.keys(errs).length) { setErrors(errs); return }
 
     setSending(true)
-    /* Simula envío — reemplazá con tu lógica real (fetch / emailjs / etc.) */
+    /* Simula envío — reemplazá con tu lógica real (fetch / emailjs / etc.) 
     setTimeout(() => {
       setSending(false)
       setSubmitted(true)
       setForm(INITIAL)
-    }, 1800)
+    }, 1800)*/
+
+    const templateParams = {
+  name: form.name,
+  email: form.email,
+  phone: form.phone || 'No proporcionado',
+  service: form.service,
+  message: form.message
+};
+
+emailjs.send(
+  import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+  import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+  templateParams, 
+  import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+)
+.then((response) => {
+  console.log('SUCCESS!', response.status, response.text);
+  setSending(false);
+  setSubmitted(true);
+  setForm(INITIAL);
+})
+.catch((err) => {
+  console.error('FAILED...', err);
+  setSending(false);
+  alert("Hubo un error al enviar el mensaje. Por favor, reintentá.");
+});
   }
+    
 
   return (
     <div className="contact-page">
