@@ -24,14 +24,16 @@ const TECH_COLORS = {
 }
 
 export default function ProjectCard({ project }) {
-  const { title, description, technologies = [], gradient, link, category } = project
+  const { title, description, technologies = [], gradient, link, category, image } = project
 
   return (
     <div className="project-card">
       {/* ── Gradient Image Area ── */}
       <div className="project-card-image" style={{ background: gradient }}>
+        {image && <img src={image} alt={title} className="project-card-img" />}
         <div className="project-card-image-overlay">
-          <a
+          {/* ACA SE PUEDE AGREGAR UN ICONO O BOTON PARA VER EL PROYECTO
+          <a  
             href={link || '#'}
             className="project-view-btn"
             target="_blank"
@@ -39,7 +41,7 @@ export default function ProjectCard({ project }) {
           >
             <i className="bi bi-arrow-up-right" />
             <span>Ver Proyecto</span>
-          </a>
+          </a> */}
         </div>
         <span className="project-category">{category}</span>
       </div>
