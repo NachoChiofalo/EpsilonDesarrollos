@@ -6,6 +6,7 @@
 
 import electoralImg from '../assets/images/electoral.png'
 import logisticsImg from '../assets/images/transporte.png'
+import museoImg from '../assets/images/museo.png'
 
 export const projects = [
   {
@@ -34,6 +35,16 @@ export const projects = [
     category: "Backend / Microservicios",
     link: "#",
     image: logisticsImg
+  },
+  {
+    id: 3, 
+    title: 'Museo Virtual para escuela CENMA N°61',
+    description: 'Museo virtual interactivo con galería cronológica para preservar y exhibir la historia y las promociones de graduados de la institución',
+    technologies: ['HTML5', 'CSS3', 'JavaScript'],
+    gradient: 'linear-gradient(135deg, #2c3e50 0%, #1a252f 50%, #151e27 100%)',
+    category: 'EdTech',
+    link: '#',
+    image: museoImg 
   },
   
 ]
