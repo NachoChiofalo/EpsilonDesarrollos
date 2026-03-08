@@ -6,7 +6,7 @@
 
 import electoralImg from '../assets/images/electoral.png'
 import logisticsImg from '../assets/images/transporte.png'
-import museoImg from '../assets/images/museo.png'
+import museoImg from '../assets/images/cenma.png'
 
 export const projects = [
   {
