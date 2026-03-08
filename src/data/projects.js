@@ -4,6 +4,8 @@
  * Cada objeto sigue la misma estructura para que ProjectCard lo renderice correctamente.
  */
 
+import electoralImg from '../assets/images/electoral.png'
+
 export const projects = [
   {
     id: 1,
@@ -14,7 +16,7 @@ export const projects = [
     gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0a1628 50%, #0d2137 100%)',
     category: 'GovTech',
     link: '#',
-      image: 'https://imgur.com/a/electoral-2tFULKn'
+    image: electoralImg
   },
   {
     id: 2,
