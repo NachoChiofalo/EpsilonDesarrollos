@@ -5,6 +5,7 @@
  */
 
 import electoralImg from '../assets/images/electoral.png'
+import logisticsImg from '../assets/images/transporte.png'
 
 export const projects = [
   {
@@ -31,7 +32,8 @@ export const projects = [
       "Docker"
     ],
     category: "Backend / Microservicios",
-    link: "#"
+    link: "#",
+    image: logisticsImg
   },
   
 ]
