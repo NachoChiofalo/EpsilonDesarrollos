@@ -14,7 +14,7 @@ export const projects = [
     gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0a1628 50%, #0d2137 100%)',
     category: 'GovTech',
     link: '#',
-      image: 'https://imgur.com/a/2tFULKn'
+      image: 'https://imgur.com/a/electoral-2tFULKn'
   },
   {
     id: 2,
