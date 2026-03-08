@@ -9,7 +9,7 @@ export const projects = [
     id: 1,
     title: 'Sistema de Gestion Electoral',
     description:
-      'Sistema electoral basado en arquitectura de microservicios para la gestión de padrón, autenticación de usuarios y visualización de resultados electorales.',
+      'Sistema electoral basado en arquitectura de microservicios para la gestión de padrón, autenticación de usuarios y visualización de resultados electorales',
     technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker'],
     gradient: 'linear-gradient(135deg, #1e3a5f 0%, #0a1628 50%, #0d2137 100%)',
     category: 'GovTech',
