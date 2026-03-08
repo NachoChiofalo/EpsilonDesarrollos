@@ -7,6 +7,7 @@
 import electoralImg from '../assets/images/electoral.png'
 import logisticsImg from '../assets/images/transporte.png'
 import museoImg from '../assets/images/cenma.png'
+import ypfManagerImg from '../assets/images/ypf-manager.png'
 
 export const projects = [
   {
@@ -45,6 +46,17 @@ export const projects = [
     category: 'EdTech',
     link: '#',
     image: museoImg 
+  },
+  {
+    id: 4,
+    title: 'Sistema de Gestión YPF',
+    description:
+      'Aplicación de escritorio para la administración integral de estaciones de servicio, cubriendo logística de camiones, control de tanques, gestión de personal y reportes estadísticos.',
+    technologies: ['C#', '.NET Framework', 'Windows Forms', 'SQL Server'],
+    gradient: 'linear-gradient(135deg, #005aab 0%, #003366 50%, #001a33 100%)',
+    category: 'Enterprise Software',
+    link: '',
+    image: ypfManagerImg
   },
   
 ]
